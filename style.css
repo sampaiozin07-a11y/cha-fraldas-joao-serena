@@ -1,0 +1,434 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFF5F7;
+    text-align: center;
+}
+
+.capa {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.texto-capa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.texto-capa h1 {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
+
+.texto-capa h2 {
+    font-size: 35px;
+    color: white;
+    margin: 15px 0;
+}
+
+.texto-capa p {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.texto-capa button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+section {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+    color: #E91E63;
+}
+
+button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.capa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.capa img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+}
+
+.texto-capa {
+    margin-top: 25px;
+}
+
+.texto-capa h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.texto-capa h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.texto-capa p {
+    font-size: 20px;
+}
+body {
+    background: linear-gradient(135deg, #ffd9e6 0%, #ffd9e6 50%, #d9ecff 50%, #d9ecff 100%);
+}
+
+/* Capa do convite */
+.capa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Foto */
+.capa img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Texto principal */
+.texto-capa h1 {
+    font-family: "Georgia", serif;
+    font-size: 42px;
+    color: #9b4d73;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.15);
+}
+
+/* Nomes */
+.texto-capa h2 {
+    font-family: "Georgia", serif;
+    font-size: 30px;
+    background: linear-gradient(to right, #d94f87, #3978d8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Data */
+.texto-capa p {
+    font-size: 22px;
+    color: #555;
+    font-weight: bold;
+}
+body {
+    background: linear-gradient(135deg, #ffd9e6 0%, #ffd9e6 50%, #d9ecff 50%, #d9ecff 100%);
+}
+
+/* Capa do convite */
+.capa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Foto */
+.capa img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Texto principal */
+.texto-capa h1 {
+    font-family: "Georgia", serif;
+    font-size: 42px;
+    color: #9b4d73;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.15);
+}
+
+/* Nomes */
+.texto-capa h2 {
+    font-family: "Georgia", serif;
+    font-size: 30px;
+    background: linear-gradient(to right, #d94f87, #3978d8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Data */
+.texto-capa {
+    margin-top: 15px;
+    position: absolute;
+    z-index: 5;
+}
+}
+/* Corrigir posição do texto abaixo da foto */
+.capa img {
+    display: block;
+    margin-bottom: 40px;
+}
+
+/* CORREÇÃO FINAL - FOTO EM CIMA E TEXTO EMBAIXO */
+
+.capa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.capa img {
+    position: relative;
+    display: block;
+    margin: 0 auto 30px auto;
+    z-index: 1;
+}
+
+.texto-capa {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 0;
+    z-index: 10;
+    text-align: center;
+}
+/* Efeito profissional na foto */
+
+.capa img {
+    border: 8px solid white;
+    box-shadow: 
+        0 0 0 5px rgba(216,79,135,0.3),
+        0 15px 35px rgba(0,0,0,0.25);
+    transition: 0.4s;
+}
+
+.capa img:hover {
+    transform: scale(1.05);
+}
+/* DECORAÇÃO AUTOMÁTICA - CHÁ REVELAÇÃO COWBOY + BEBÊ */
+
+.capa {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Balões decorativos */
+.capa::before {
+    content: "🎈";
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 70px;
+}
+
+/* Detalhe cowboy */
+.capa::after {
+    content: "🤠";
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    font-size: 70px;
+}
+
+/* Detalhes espalhados */
+.capa {
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,105,180,0.25) 0 25px, transparent 26px),
+        radial-gradient(circle at 90% 20%, rgba(0,120,255,0.25) 0 25px, transparent 26px),
+        radial-gradient(circle at 15% 80%, rgba(150,90,40,0.20) 0 30px, transparent 31px);
+}
+/* DECORAÇÃO FAZENDA + BEBÊ */
+
+/* Cavalo cowboy */
+.capa .cavalo {
+    position: absolute;
+    left: 25px;
+    bottom: 120px;
+    font-size: 55px;
+}
+
+/* Vaquinha */
+.capa .vaca {
+    position: absolute;
+    right: 25px;
+    top: 180px;
+    font-size: 50px;
+}
+
+/* Botinha cowboy */
+.capa .bota {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    font-size: 55px;
+}
+
+/* Espalhar pequenos detalhes */
+.capa {
+    background-image:
+        radial-gradient(circle at 15% 25%, rgba(255,105,180,0.25) 0 18px, transparent 19px),
+        radial-gradient(circle at 85% 30%, rgba(0,120,255,0.25) 0 18px, transparent 19px);
+}
+/* PÁGINA DE MIMOS */
+
+.mimos {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffd9e6, #d9ecff);
+}
+
+.mimos h1 {
+    font-family: Georgia, serif;
+    color: #9b4d73;
+    font-size: 36px;
+}
+
+.mimos p {
+    color: #555;
+    font-size: 18px;
+}
+
+.lista-mimos {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-mimos button {
+    background: white;
+    color: #555;
+    border: none;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 17px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.lista-mimos button:hover {
+    background: #ffeaf2;
+    transform: scale(1.02);
+}
+/* PAINEL ADMIN */
+
+.admin {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffd9e6, #d9ecff);
+}
+
+
+.admin h1 {
+    color: #9b4d73;
+    font-size: 35px;
+}
+
+
+.admin input {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+
+.admin button {
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+}
+
+
+.admin table {
+
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+
+    border-collapse: separate;
+    border-spacing: 0 15px;
+
+}
+
+
+.admin th {
+
+    background: white;
+    padding: 15px;
+    font-size: 18px;
+
+}
+
+
+.admin td {
+
+    background: white;
+    padding: 20px;
+    font-size: 16px;
+
+}
+
+
+.admin tr {
+
+    border-radius: 20px;
+
+}

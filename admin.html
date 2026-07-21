@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Administrativo</title>
+
+</head>
+
+
+<body>
+
+
+<section class="admin">
+
+
+<h1>🔐 Painel dos Mimos</h1>
+
+
+<div id="login">
+
+
+<input 
+type="password" 
+id="senha"
+placeholder="Digite a senha">
+
+
+<button onclick="entrar()">
+Entrar
+</button>
+
+
+</div>
+
+
+
+<div id="painel" style="display:none;">
+
+
+<h2>🎁 Lista de escolhas</h2>
+
+<button onclick="carregarDados()">
+🔄 Atualizar lista
+</button>
+
+<p id="status">Carregando...</p>
+
+
+<table border="1">
+
+
+<thead>
+
+<tr>
+
+<th>Mimo</th>
+
+<th>Nome</th>
+
+<th>WhatsApp</th>
+
+<th>Número</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="lista">
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+let linkPlanilha = "https://script.google.com/macros/s/AKfycby7DVHg77x9IXONGHvePklas-HCcWi1-1O6z9kxYGrYgmdt9xBVY_IYAd39fXuonPLGRQ/exec";
+
+
+
+function entrar(){
+
+
+let senha = document.getElementById("senha").value;
+
+
+
+if(senha === "joao123"){
+
+
+document.getElementById("login").style.display="none";
+
+
+document.getElementById("painel").style.display="block";
+
+
+carregarDados();
+
+
+}
+
+else{
+
+
+alert("Senha incorreta");
+
+
+}
+
+
+}
+
+
+
+function carregarDados(){
+
+
+fetch(linkPlanilha)
+
+
+.then(res => res.json())
+
+
+.then(dados => {
+
+
+let lista = document.getElementById("lista");
+
+
+document.getElementById("status").innerHTML =
+"✅ Conectado à planilha";
+
+
+lista.innerHTML="";
+
+
+
+dados.slice(1).forEach(item => {
+
+
+lista.innerHTML += `
+
+<tr>
+
+<td>${item[0] || ""}</td>
+
+<td>${item[1] || ""}</td>
+
+<td>${item[2] || ""}</td>
+
+<td>${item[3] || ""}</td>
+
+</tr>
+
+`;
+
+});
+
+
+})
+
+
+.catch(erro => {
+
+
+document.getElementById("status").innerHTML =
+"❌ Erro ao conectar com a planilha";
+
+
+console.log(erro);
+
+
+});
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

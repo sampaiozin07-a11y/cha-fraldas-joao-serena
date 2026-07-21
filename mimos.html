@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Escolha seu mimo 🎁</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="mimos">
+
+
+<h1>🎁 O que falta para Serena ou João? 🤍</h1>
+
+<p>
+Escolha um mimo especial para fazer parte desse momento tão lindo.
+</p>
+
+
+
+<div class="lista-mimos">
+
+
+<button onclick="escolherMimo('Kit berço (cor neutra)', this)">
+🛏️ Kit berço (cor neutra)
+</button>
+
+
+<button onclick="escolherMimo('Ninho (cor neutra)', this)">
+👶 Ninho (cor neutra)
+</button>
+
+
+<button onclick="escolherMimo('Almofada de amamentação (cor neutra)', this)">
+🤱 Almofada de amamentação (cor neutra)
+</button>
+
+
+<button onclick="escolherMimo('Carrinho de bebê ou bebê conforto', this)">
+🚼 Carrinho de bebê ou bebê conforto
+</button>
+
+
+<button onclick="escolherMimo('Lençóis para berço', this)">
+🛌 Lençóis para berço
+</button>
+
+
+<button onclick="escolherMimo('Pomada para prevenção de assaduras', this)">
+🧴 Pomada para prevenção de assaduras
+</button>
+
+
+<button onclick="escolherMimo('Shampoo para bebê', this)">
+🧼 Shampoo para bebê
+</button>
+
+
+<button onclick="escolherMimo('Aspirador nasal', this)">
+👃 Aspirador nasal
+</button>
+
+
+<button onclick="escolherMimo('Termômetro digital', this)">
+🌡️ Termômetro digital
+</button>
+
+
+<button onclick="escolherMimo('Cortador de unha ou tesourinha', this)">
+✂️ Cortador de unha ou tesourinha
+</button>
+
+
+<button onclick="escolherMimo('Pente para bebê', this)">
+💇 Pente para bebê
+</button>
+
+
+<button onclick="escolherMimo('Bicos', this)">
+🍼 Bicos
+</button>
+
+
+<button onclick="escolherMimo('Paninhos de boca', this)">
+🤍 Paninhos de boca
+</button>
+
+
+<button onclick="escolherMimo('Cestos organizadores', this)">
+🧺 Cestos organizadores
+</button>
+
+
+<button onclick="escolherMimo('Cabides infantis', this)">
+👕 Cabides infantis
+</button>
+
+
+<button onclick="escolherMimo('Naninha neutra', this)">
+🐻 Naninha neutra
+</button>
+
+
+<button onclick="escolherMimo('Ursinho de pelúcia cores neutras', this)">
+🧸 Ursinho de pelúcia
+</button>
+
+
+<button onclick="escolherMimo('Móbile para berço cores neutras', this)">
+🎠 Móbile para berço
+</button>
+
+
+<button onclick="escolherMimo('Roupinhas neutras', this)">
+👚 Roupinhas neutras
+</button>
+
+
+<button onclick="escolherMimo('Bodies de manga curta', this)">
+👕 Bodies de manga curta
+</button>
+
+
+<button onclick="escolherMimo('Bodies de manga longa', this)">
+👕 Bodies de manga longa
+</button>
+
+
+<button onclick="escolherMimo('Culotes', this)">
+👖 Culotes
+</button>
+
+
+<button onclick="escolherMimo('Calças', this)">
+👖 Calças
+</button>
+
+
+<button onclick="escolherMimo('Casaquinhos', this)">
+🧥 Casaquinhos
+</button>
+
+
+<button onclick="escolherMimo('Meias', this)">
+🧦 Meias
+</button>
+
+
+<button onclick="escolherMimo('Touquinhas', this)">
+🧢 Touquinhas
+</button>
+
+
+<button onclick="escolherMimo('Cobertor cores neutras', this)">
+🛌 Cobertor
+</button>
+
+
+<button onclick="escolherMimo('Mantas extras', this)">
+🧺 Mantas extras
+</button>
+
+
+<button onclick="escolherMimo('Toalha com capuz', this)">
+🛁 Toalha com capuz
+</button>
+
+
+<button onclick="escolherMimo('Mordedor', this)">
+🦷 Mordedor
+</button>
+
+
+<button onclick="escolherMimo('Lixeira para fraldas', this)">
+🗑️ Lixeira para fraldas
+</button>
+
+
+<button onclick="escolherMimo('Kit higiene', this)">
+🧴 Kit higiene
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+<script>
+
+
+function escolherMimo(nome, botao){
+
+
+window.open(
+"formulario.html?mimo=" + encodeURIComponent(nome),
+"_blank"
+);
+
+
+}
+
+
+
+let linkPlanilha = "SEU LINK DO APPS SCRIPT";
+
+
+
+fetch(linkPlanilha)
+
+.then(res => res.json())
+
+.then(dados => {
+
+
+let escolhidos = dados.slice(1).map(linha => linha[0]);
+
+
+
+let botoes = document.querySelectorAll(".lista-mimos button");
+
+
+
+botoes.forEach(botao => {
+
+
+let texto = botao.innerText;
+
+
+
+escolhidos.forEach(mimo => {
+
+
+if(texto.includes(mimo)){
+
+
+botao.style.display = "none";
+
+
+}
+
+
+});
+
+
+});
+
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
