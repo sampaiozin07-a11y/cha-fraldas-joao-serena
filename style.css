@@ -432,3 +432,39 @@ body {
     border-radius: 20px;
 
 }
+.botao-confirmar {
+    width: 280px;
+    height: 50px;
+    margin: 8px auto;
+    font-size: 16px;
+    border-radius: 25px;
+    display: block;
+}
+.rolar {
+    margin-top: 25px;
+    font-size: 18px;
+    animation: subirDescer 1.5s infinite;
+    font-weight: bold;
+}
+
+@keyframes subirDescer {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.confirmar a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.confirmar button {
+    width: 180px;
+}
